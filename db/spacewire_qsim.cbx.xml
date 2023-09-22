@@ -6,8 +6,9 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|spwstream:inst|spwrecv:recv_inst|lpm_mux:Mux0" CBX_FILE_NAME="mux_7qc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|spwstream:inst1|spwrecv:recv_inst|lpm_mux:Mux0" CBX_FILE_NAME="mux_7qc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|spwstream:inst1|spwrecv:recv_inst|lpm_mux:Mux8" CBX_FILE_NAME="mux_7qc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0" CBX_FILE_NAME="altsyncram_p1h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0" CBX_FILE_NAME="altsyncram_fdg1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|spwstream:inst|spwrecv:recv_inst|lpm_mux:Mux1" CBX_FILE_NAME="mux_7qc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|lpm_constant0:inst5|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_rf6.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|spwstream:inst1|spwrecv:recv_inst|lpm_mux:Mux1" CBX_FILE_NAME="mux_7qc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|spwstream:inst1|spwrecv:recv_inst|lpm_mux:Mux10" CBX_FILE_NAME="mux_7qc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|spwstream:inst1|spwrecv:recv_inst|lpm_mux:Mux5" CBX_FILE_NAME="mux_7qc.tdf"/>

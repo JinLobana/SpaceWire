@@ -1,5 +1,5 @@
 Analysis & Synthesis report for spacewire
-Mon Sep 11 20:27:42 2023
+Thu Sep 21 12:31:30 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -24,7 +24,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  16. Registers Packed Into Inferred Megafunctions
  17. Multiplexer Restructuring Statistics (Restructuring Performed)
  18. Source assignments for spwstream:inst1|spwram:rxmem|altsyncram:s_mem_rtl_0|altsyncram_23h1:auto_generated
- 19. Source assignments for spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0|altsyncram_23h1:auto_generated
+ 19. Source assignments for spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0|altsyncram_6fg1:auto_generated
  20. Parameter Settings for User Entity Instance: spwstream:inst
  21. Parameter Settings for User Entity Instance: spwstream:inst|spwlink:link_inst
  22. Parameter Settings for User Entity Instance: spwstream:inst|spwrecv:recv_inst
@@ -36,14 +36,15 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  28. Parameter Settings for User Entity Instance: spwstream:inst1|spwram:rxmem
  29. Parameter Settings for User Entity Instance: spwstream:inst1|spwram:txmem
  30. Parameter Settings for User Entity Instance: lpm_constant0:inst3|lpm_constant:LPM_CONSTANT_component
- 31. Parameter Settings for User Entity Instance: lpm_constant0:inst2|lpm_constant:LPM_CONSTANT_component
- 32. Parameter Settings for Inferred Entity Instance: spwstream:inst1|spwram:rxmem|altsyncram:s_mem_rtl_0
- 33. Parameter Settings for Inferred Entity Instance: spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0
- 34. altsyncram Parameter Settings by Entity Instance
- 35. Port Connectivity Checks: "spwstream:inst|spwram:txmem"
- 36. Port Connectivity Checks: "spwstream:inst|spwram:rxmem"
- 37. Elapsed Time Per Partition
- 38. Analysis & Synthesis Messages
+ 31. Parameter Settings for User Entity Instance: lpm_constant0:inst5|lpm_constant:LPM_CONSTANT_component
+ 32. Parameter Settings for User Entity Instance: lpm_constant0:inst2|lpm_constant:LPM_CONSTANT_component
+ 33. Parameter Settings for Inferred Entity Instance: spwstream:inst1|spwram:rxmem|altsyncram:s_mem_rtl_0
+ 34. Parameter Settings for Inferred Entity Instance: spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0
+ 35. altsyncram Parameter Settings by Entity Instance
+ 36. Port Connectivity Checks: "spwstream:inst|spwram:txmem"
+ 37. Port Connectivity Checks: "spwstream:inst|spwram:rxmem"
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
 
 
 
@@ -69,18 +70,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Sep 11 20:27:42 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep 21 12:31:30 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; spacewire                                       ;
 ; Top-level Entity Name              ; spacewire                                       ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 608                                             ;
-;     Total combinational functions  ; 590                                             ;
-;     Dedicated logic registers      ; 304                                             ;
-; Total registers                    ; 304                                             ;
-; Total pins                         ; 36                                              ;
+; Total logic elements               ; 627                                             ;
+;     Total combinational functions  ; 601                                             ;
+;     Dedicated logic registers      ; 321                                             ;
+; Total registers                    ; 321                                             ;
+; Total pins                         ; 33                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 36,864                                          ;
+; Total memory bits                  ; 34,816                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -189,6 +190,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                      ; Library ;
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------+---------+
+; DFF8bit.vhd                      ; yes             ; User VHDL File                     ; /home/quartus/SpaceWire/DFF8bit.vhd                                               ;         ;
 ; spwpkg.vhd                       ; yes             ; User VHDL File                     ; /home/quartus/SpaceWire/spwpkg.vhd                                                ;         ;
 ; spwlink.vhd                      ; yes             ; User VHDL File                     ; /home/quartus/SpaceWire/spwlink.vhd                                               ;         ;
 ; spwrecvfront_generic.vhd         ; yes             ; User VHDL File                     ; /home/quartus/SpaceWire/spwrecvfront_generic.vhd                                  ;         ;
@@ -209,6 +211,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altram.inc                       ; yes             ; Megafunction                       ; /opt/quartus/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                       ; /opt/quartus/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
 ; db/altsyncram_23h1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/quartus/SpaceWire/db/altsyncram_23h1.tdf                                    ;         ;
+; db/altsyncram_6fg1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/quartus/SpaceWire/db/altsyncram_6fg1.tdf                                    ;         ;
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
@@ -217,28 +220,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 608       ;
+; Estimated Total logic elements              ; 627       ;
 ;                                             ;           ;
-; Total combinational functions               ; 590       ;
+; Total combinational functions               ; 601       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 235       ;
-;     -- 3 input functions                    ; 138       ;
-;     -- <=2 input functions                  ; 217       ;
+;     -- 4 input functions                    ; 249       ;
+;     -- 3 input functions                    ; 130       ;
+;     -- <=2 input functions                  ; 222       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 429       ;
-;     -- arithmetic mode                      ; 161       ;
+;     -- normal mode                          ; 433       ;
+;     -- arithmetic mode                      ; 168       ;
 ;                                             ;           ;
-; Total registers                             ; 304       ;
-;     -- Dedicated logic registers            ; 304       ;
+; Total registers                             ; 321       ;
+;     -- Dedicated logic registers            ; 321       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 36        ;
-; Total memory bits                           ; 36864     ;
+; I/O pins                                    ; 33        ;
+; Total memory bits                           ; 34816     ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 322       ;
-; Total fan-out                               ; 3071      ;
+; Maximum fan-out                             ; 330       ;
+; Total fan-out                               ; 3131      ;
 ; Average fan-out                             ; 3.12      ;
 +---------------------------------------------+-----------+
 
@@ -248,23 +251,24 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                           ; Library Name ;
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
-; |spacewire                                                          ; 590 (1)           ; 304 (0)      ; 36864       ; 0            ; 0       ; 0         ; 36   ; 0            ; |spacewire                                                                                    ; work         ;
-;    |spwstream:inst1|                                                ; 317 (98)          ; 159 (47)     ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst1                                                                    ; work         ;
-;       |spwlink:link_inst|                                           ; 102 (102)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst1|spwlink:link_inst                                                  ; work         ;
+; |spacewire                                                          ; 601 (1)           ; 321 (0)      ; 34816       ; 0            ; 0       ; 0         ; 33   ; 0            ; |spacewire                                                                                    ; work         ;
+;    |DFF8bit:inst4|                                                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|DFF8bit:inst4                                                                      ; work         ;
+;    |spwstream:inst1|                                                ; 316 (96)          ; 159 (47)     ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst1                                                                    ; work         ;
+;       |spwlink:link_inst|                                           ; 104 (104)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst1|spwlink:link_inst                                                  ; work         ;
 ;       |spwram:rxmem|                                                ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst1|spwram:rxmem                                                       ; work         ;
 ;          |altsyncram:s_mem_rtl_0|                                   ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst1|spwram:rxmem|altsyncram:s_mem_rtl_0                                ; work         ;
 ;             |altsyncram_23h1:auto_generated|                        ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst1|spwram:rxmem|altsyncram:s_mem_rtl_0|altsyncram_23h1:auto_generated ; work         ;
 ;       |spwrecv:recv_inst|                                           ; 62 (62)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst1|spwrecv:recv_inst                                                  ; work         ;
 ;       |spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst| ; 1 (1)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst        ; work         ;
-;       |spwxmit:\xmit_sel0:xmit_inst|                                ; 54 (54)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst                                       ; work         ;
-;    |spwstream:inst|                                                 ; 272 (73)          ; 145 (46)     ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst                                                                     ; work         ;
+;       |spwxmit:\xmit_sel0:xmit_inst|                                ; 53 (53)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst                                       ; work         ;
+;    |spwstream:inst|                                                 ; 284 (71)          ; 154 (46)     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst                                                                     ; work         ;
 ;       |spwlink:link_inst|                                           ; 102 (102)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst|spwlink:link_inst                                                   ; work         ;
-;       |spwram:txmem|                                                ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst|spwram:txmem                                                        ; work         ;
-;          |altsyncram:s_mem_rtl_0|                                   ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0                                 ; work         ;
-;             |altsyncram_23h1:auto_generated|                        ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0|altsyncram_23h1:auto_generated  ; work         ;
+;       |spwram:txmem|                                                ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst|spwram:txmem                                                        ; work         ;
+;          |altsyncram:s_mem_rtl_0|                                   ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0                                 ; work         ;
+;             |altsyncram_6fg1:auto_generated|                        ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0|altsyncram_6fg1:auto_generated  ; work         ;
 ;       |spwrecv:recv_inst|                                           ; 52 (52)           ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst|spwrecv:recv_inst                                                   ; work         ;
 ;       |spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst| ; 1 (1)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst         ; work         ;
-;       |spwxmit:\xmit_sel0:xmit_inst|                                ; 44 (44)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst                                        ; work         ;
+;       |spwxmit:\xmit_sel0:xmit_inst|                                ; 58 (58)           ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst                                        ; work         ;
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -275,7 +279,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                          ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
 +-----------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 ; spwstream:inst1|spwram:rxmem|altsyncram:s_mem_rtl_0|altsyncram_23h1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 2048         ; 9            ; 2048         ; 9            ; 18432 ; None ;
-; spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0|altsyncram_23h1:auto_generated|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 2048         ; 9            ; 2048         ; 9            ; 18432 ; None ;
+; spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0|altsyncram_6fg1:auto_generated|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 2048         ; 8            ; 2048         ; 8            ; 16384 ; None ;
 +-----------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 
 
@@ -286,6 +290,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------+-------------------------------------------+
 ; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |spacewire|lpm_constant0:inst2 ; /home/quartus/SpaceWire/lpm_constant0.vhd ;
 ; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |spacewire|lpm_constant0:inst3 ; /home/quartus/SpaceWire/lpm_constant0.vhd ;
+; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |spacewire|lpm_constant0:inst5 ; /home/quartus/SpaceWire/lpm_constant0.vhd ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-------------------------------------------+
 
 
@@ -319,67 +324,57 @@ Encoding Type:  One-Hot
 +----------------------+---------------+----------------------+-------------------+-----------------+---------------------+----------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                     ;
-+---------------------------------------------------------------+------------------------------------------------------------------------+
-; Register name                                                 ; Reason for Removal                                                     ;
-+---------------------------------------------------------------+------------------------------------------------------------------------+
-; spwstream:inst|r.rxfifo_rvalid                                ; Lost fanout                                                            ;
-; spwstream:inst1|spwram:txmem|rdata[0..8]                      ; Stuck at GND due to stuck port data_in                                 ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[3]    ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|r.txfifo_waddr[6]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|r.rxfifo_raddr[4,6]                            ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[3]   ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[0]    ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|r.txfifo_waddr[4]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|r.rxfifo_raddr[9]                              ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|r.txfifo_waddr[5]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[2]   ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|r.rxfifo_raddr[5,7,10]                         ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|r.txfifo_waddr[2]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[6]    ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[0]   ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|r.rxfifo_raddr[0]                              ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[7]    ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|r.txfifo_waddr[7]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[7]   ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[5]    ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|r.txfifo_waddr[3,9]                           ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[4]    ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|r.txfifo_waddr[8]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[1]   ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|r.txfifo_waddr[0]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|r.rxfifo_raddr[2]                              ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[2]    ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|r.rxfifo_raddr[1,3]                            ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|r.txfifo_waddr[1]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|r.rxfifo_raddr[8]                              ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[6]   ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[1]    ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[4,5] ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[0]     ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[0] ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[1]     ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[1] ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[2]     ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[2] ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[3]     ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[3] ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[4]     ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[4] ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[5]     ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[5] ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[6]     ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[6] ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[7]     ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[7] ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclken         ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclken     ;
-; spwstream:inst1|r.txfifo_waddr[10]                            ; Stuck at GND due to stuck port data_in                                 ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick      ; Stuck at GND due to stuck port data_in                                 ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[12]   ; Stuck at GND due to stuck port data_in                                 ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick       ; Stuck at GND due to stuck port data_in                                 ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[12]    ; Stuck at GND due to stuck port data_in                                 ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[11]   ; Stuck at GND due to stuck port data_in                                 ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[11]    ; Stuck at GND due to stuck port data_in                                 ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[10]   ; Stuck at GND due to stuck port data_in                                 ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[10]    ; Stuck at GND due to stuck port data_in                                 ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[9]    ; Stuck at GND due to stuck port data_in                                 ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[9]     ; Stuck at GND due to stuck port data_in                                 ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[5..8] ; Stuck at GND due to stuck port data_in                                 ;
-; Total Number of Removed Registers = 71                        ;                                                                        ;
-+---------------------------------------------------------------+------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                             ;
++---------------------------------------------------------------+------------------------------------------------+
+; Register name                                                 ; Reason for Removal                             ;
++---------------------------------------------------------------+------------------------------------------------+
+; spwstream:inst|r.rxfifo_rvalid                                ; Lost fanout                                    ;
+; spwstream:inst1|spwram:txmem|rdata[0..8]                      ; Stuck at GND due to stuck port data_in         ;
+; spwstream:inst|spwram:txmem|rdata[8]                          ; Stuck at GND due to stuck port data_in         ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[4]    ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[5,7] ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst|r.rxfifo_raddr[4]                              ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[2]   ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|r.txfifo_waddr[0,2,9]                         ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst|r.rxfifo_raddr[10]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[0,6]  ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst|r.rxfifo_raddr[5]                              ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[4]   ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst|r.rxfifo_raddr[1]                              ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|r.txfifo_waddr[5]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[6]   ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|r.txfifo_waddr[7]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst|r.rxfifo_raddr[9]                              ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[7]    ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst|r.rxfifo_raddr[3,8]                            ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[1,5]  ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|r.txfifo_waddr[3]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst|r.rxfifo_raddr[0,6]                            ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[3]    ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[0]   ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst|r.rxfifo_raddr[7]                              ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|r.txfifo_waddr[6]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[3]   ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst|r.rxfifo_raddr[2]                              ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|r.txfifo_waddr[1,8]                           ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[1]   ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[2]    ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|r.txfifo_waddr[4]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
+; spwstream:inst1|r.txfifo_waddr[10]                            ; Stuck at GND due to stuck port data_in         ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick      ; Stuck at GND due to stuck port data_in         ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[12]   ; Stuck at GND due to stuck port data_in         ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick       ; Stuck at GND due to stuck port data_in         ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[12]    ; Stuck at GND due to stuck port data_in         ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[11]   ; Stuck at GND due to stuck port data_in         ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[11]    ; Stuck at GND due to stuck port data_in         ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[10]   ; Stuck at GND due to stuck port data_in         ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[10]    ; Stuck at GND due to stuck port data_in         ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[9]    ; Stuck at GND due to stuck port data_in         ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[9]     ; Stuck at GND due to stuck port data_in         ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[5..8] ; Stuck at GND due to stuck port data_in         ;
+; Total Number of Removed Registers = 63                        ;                                                ;
++---------------------------------------------------------------+------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -388,11 +383,10 @@ Encoding Type:  One-Hot
 ; Register name                                            ; Reason for Removal        ; Registers Removed due to This Register                       ;
 +----------------------------------------------------------+---------------------------+--------------------------------------------------------------+
 ; spwstream:inst1|r.txfifo_waddr[10]                       ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[12], ;
-;                                                          ; due to stuck port data_in ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[11], ;
-;                                                          ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[11],  ;
-;                                                          ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[10]   ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[10], ;
-;                                                          ; due to stuck port data_in ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[9]   ;
+;                                                          ; due to stuck port data_in ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[11],  ;
+;                                                          ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[10], ;
+;                                                          ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[9],  ;
+;                                                          ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[9]    ;
 ; spwstream:inst1|spwram:txmem|rdata[4]                    ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[5]   ;
 ;                                                          ; due to stuck port data_in ;                                                              ;
 ; spwstream:inst1|spwram:txmem|rdata[5]                    ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[6]   ;
@@ -401,7 +395,9 @@ Encoding Type:  One-Hot
 ;                                                          ; due to stuck port data_in ;                                                              ;
 ; spwstream:inst1|spwram:txmem|rdata[7]                    ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[8]   ;
 ;                                                          ; due to stuck port data_in ;                                                              ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick  ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[9]    ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[11]  ;
+;                                                          ; due to stuck port data_in ;                                                              ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick  ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[10]   ;
 ;                                                          ; due to stuck port data_in ;                                                              ;
 +----------------------------------------------------------+---------------------------+--------------------------------------------------------------+
 
@@ -411,12 +407,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 304   ;
-; Number of registers using Synchronous Clear  ; 39    ;
-; Number of registers using Synchronous Load   ; 20    ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Total registers                              ; 321   ;
+; Number of registers using Synchronous Clear  ; 40    ;
+; Number of registers using Synchronous Load   ; 21    ;
+; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 104   ;
+; Number of registers using Clock Enable       ; 106   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -426,8 +422,10 @@ Encoding Type:  One-Hot
 +-------------------------------------------------+---------+
 ; Inverted Register                               ; Fan out ;
 +-------------------------------------------------+---------+
-; spwstream:inst|spwlink:link_inst|r.timercnt[7]  ; 2       ;
-; spwstream:inst1|spwlink:link_inst|r.timercnt[7] ; 2       ;
+; spwstream:inst|spwlink:link_inst|r.timercnt[8]  ; 2       ;
+; spwstream:inst|spwlink:link_inst|r.timercnt[6]  ; 2       ;
+; spwstream:inst1|spwlink:link_inst|r.timercnt[8] ; 2       ;
+; spwstream:inst1|spwlink:link_inst|r.timercnt[6] ; 2       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitshift[6]  ; 6       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitshift[7]  ; 6       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitshift[1]  ; 2       ;
@@ -446,7 +444,7 @@ Encoding Type:  One-Hot
 ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[5] ; 3       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[4] ; 3       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[8] ; 3       ;
-; Total number of inverted registers = 20         ;         ;
+; Total number of inverted registers = 22         ;         ;
 +-------------------------------------------------+---------+
 
 
@@ -456,7 +454,7 @@ Encoding Type:  One-Hot
 ; Register Name                            ; Megafunction                             ; Type ;
 +------------------------------------------+------------------------------------------+------+
 ; spwstream:inst1|spwram:rxmem|rdata[0..8] ; spwstream:inst1|spwram:rxmem|s_mem_rtl_0 ; RAM  ;
-; spwstream:inst|spwram:txmem|rdata[0..8]  ; spwstream:inst|spwram:txmem|s_mem_rtl_0  ; RAM  ;
+; spwstream:inst|spwram:txmem|rdata[0..7]  ; spwstream:inst|spwram:txmem|s_mem_rtl_0  ; RAM  ;
 +------------------------------------------+------------------------------------------+------+
 
 
@@ -465,30 +463,34 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[10]          ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[2]           ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.rx_credit[0]          ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.rx_credit[5]          ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[9]            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.rx_credit[3]          ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[10]           ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.rx_credit[2]           ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.rx_credit[3]           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.rx_credit[4]           ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.tx_credit[0]           ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.tx_credit[3]           ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.tx_credit[0]          ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.tx_credit[5]          ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1]  ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwrecv:recv_inst|r.disccnt[0]            ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwrecv:recv_inst|r.disccnt[3]             ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |spacewire|spwstream:inst1|spwrecv:recv_inst|r.bitcnt[1]             ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |spacewire|spwstream:inst|spwrecv:recv_inst|r.bitcnt[1]              ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[3]   ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |spacewire|spwstream:inst1|spwrecv:recv_inst|r.datareg[4]            ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwrecv:recv_inst|r.bitshift[5]           ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwrecv:recv_inst|r.bitshift[2]            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.tx_credit[2]          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.tx_credit[4]          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.parity     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1]   ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[2] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwrecv:recv_inst|r.disccnt[2]            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwrecv:recv_inst|r.disccnt[6]             ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[2]   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |spacewire|spwstream:inst1|spwrecv:recv_inst|r.bitcnt[4]             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |spacewire|spwstream:inst|spwrecv:recv_inst|r.bitcnt[7]              ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |spacewire|spwstream:inst1|spwrecv:recv_inst|r.datareg[3]            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[8]           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[8]            ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwrecv:recv_inst|r.bitshift[6]           ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwrecv:recv_inst|r.bitshift[3]            ;
 ; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; No         ; |spacewire|spwstream:inst1|v                                         ;
 ; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; No         ; |spacewire|spwstream:inst|v                                          ;
-; 17:1               ; 6 bits    ; 66 LEs        ; 42 LEs               ; 24 LEs                 ; No         ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector3               ;
-; 17:1               ; 6 bits    ; 66 LEs        ; 42 LEs               ; 24 LEs                 ; No         ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0                ;
+; 17:1               ; 6 bits    ; 66 LEs        ; 42 LEs               ; 24 LEs                 ; No         ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0               ;
+; 17:1               ; 6 bits    ; 66 LEs        ; 42 LEs               ; 24 LEs                 ; No         ; |spacewire|spwstream:inst|spwlink:link_inst|Selector3                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 
 
@@ -502,7 +504,7 @@ Encoding Type:  One-Hot
 
 
 +----------------------------------------------------------------------------------------------------------+
-; Source assignments for spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0|altsyncram_23h1:auto_generated ;
+; Source assignments for spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0|altsyncram_6fg1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                         ;
 +---------------------------------+--------------------+------+--------------------------------------------+
@@ -515,7 +517,7 @@ Encoding Type:  One-Hot
 +-----------------+--------------+----------------------------+
 ; Parameter Name  ; Value        ; Type                       ;
 +-----------------+--------------+----------------------------+
-; sysfreq         ; 20000000.0   ; Signed Float               ;
+; sysfreq         ; 50000000.0   ; Signed Float               ;
 ; txclkfreq       ; 0.0          ; Signed Float               ;
 ; rximpl          ; impl_generic ; Enumerated                 ;
 ; rxchunk         ; 1            ; Signed Integer             ;
@@ -531,7 +533,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                 ;
 +----------------+-------+------------------------------------------------------+
-; reset_time     ; 128   ; Signed Integer                                       ;
+; reset_time     ; 320   ; Signed Integer                                       ;
 +----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -541,7 +543,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+-------+-----------------------------------------------------+
 ; Parameter Name  ; Value ; Type                                                ;
 +-----------------+-------+-----------------------------------------------------+
-; disconnect_time ; 17    ; Signed Integer                                      ;
+; disconnect_time ; 43    ; Signed Integer                                      ;
 ; rxchunk         ; 1     ; Signed Integer                                      ;
 +-----------------+-------+-----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -574,7 +576,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+--------------+-----------------------------+
 ; Parameter Name  ; Value        ; Type                        ;
 +-----------------+--------------+-----------------------------+
-; sysfreq         ; 20000000.0   ; Signed Float                ;
+; sysfreq         ; 50000000.0   ; Signed Float                ;
 ; txclkfreq       ; 0.0          ; Signed Float                ;
 ; rximpl          ; impl_generic ; Enumerated                  ;
 ; rxchunk         ; 1            ; Signed Integer              ;
@@ -590,7 +592,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                  ;
 +----------------+-------+-------------------------------------------------------+
-; reset_time     ; 128   ; Signed Integer                                        ;
+; reset_time     ; 320   ; Signed Integer                                        ;
 +----------------+-------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -600,7 +602,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+-------+------------------------------------------------------+
 ; Parameter Name  ; Value ; Type                                                 ;
 +-----------------+-------+------------------------------------------------------+
-; disconnect_time ; 17    ; Signed Integer                                       ;
+; disconnect_time ; 43    ; Signed Integer                                       ;
 ; rxchunk         ; 1     ; Signed Integer                                       ;
 +-----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -634,9 +636,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name     ; Value            ; Type                                                         ;
 +--------------------+------------------+--------------------------------------------------------------+
 ; LPM_WIDTH          ; 8                ; Signed Integer                                               ;
-; LPM_CVALUE         ; 1                ; Signed Integer                                               ;
+; LPM_CVALUE         ; 255              ; Signed Integer                                               ;
 ; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                      ;
-; CBXI_PARAMETER     ; lpm_constant_rf6 ; Untyped                                                      ;
+; CBXI_PARAMETER     ; lpm_constant_6j6 ; Untyped                                                      ;
++--------------------+------------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_constant0:inst5|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+--------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                         ;
++--------------------+------------------+--------------------------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                                               ;
+; LPM_CVALUE         ; 255              ; Signed Integer                                               ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                      ;
+; CBXI_PARAMETER     ; lpm_constant_6j6 ; Untyped                                                      ;
 +--------------------+------------------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -647,9 +662,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name     ; Value            ; Type                                                         ;
 +--------------------+------------------+--------------------------------------------------------------+
 ; LPM_WIDTH          ; 8                ; Signed Integer                                               ;
-; LPM_CVALUE         ; 1                ; Signed Integer                                               ;
+; LPM_CVALUE         ; 255              ; Signed Integer                                               ;
 ; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                      ;
-; CBXI_PARAMETER     ; lpm_constant_rf6 ; Untyped                                                      ;
+; CBXI_PARAMETER     ; lpm_constant_6j6 ; Untyped                                                      ;
 +--------------------+------------------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -727,7 +742,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                          ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                                 ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                 ;
-; WIDTH_A                            ; 9                    ; Untyped                                 ;
+; WIDTH_A                            ; 8                    ; Untyped                                 ;
 ; WIDTHAD_A                          ; 11                   ; Untyped                                 ;
 ; NUMWORDS_A                         ; 2048                 ; Untyped                                 ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                 ;
@@ -736,7 +751,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                 ;
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                                 ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                 ;
-; WIDTH_B                            ; 9                    ; Untyped                                 ;
+; WIDTH_B                            ; 8                    ; Untyped                                 ;
 ; WIDTHAD_B                          ; 11                   ; Untyped                                 ;
 ; NUMWORDS_B                         ; 2048                 ; Untyped                                 ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                                 ;
@@ -771,7 +786,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                 ;
 ; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                 ;
-; CBXI_PARAMETER                     ; altsyncram_23h1      ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_6fg1      ; Untyped                                 ;
 +------------------------------------+----------------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -795,10 +810,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                            ;
 ; Entity Instance                           ; spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0  ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                           ;
-;     -- WIDTH_A                            ; 9                                                   ;
+;     -- WIDTH_A                            ; 8                                                   ;
 ;     -- NUMWORDS_A                         ; 2048                                                ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                        ;
-;     -- WIDTH_B                            ; 9                                                   ;
+;     -- WIDTH_B                            ; 8                                                   ;
 ;     -- NUMWORDS_B                         ; 2048                                                ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                              ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                        ;
@@ -840,9 +855,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Sep 11 20:27:37 2023
+    Info: Processing started: Thu Sep 21 12:31:25 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off spacewire -c spacewire
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file DFF8bit.vhd
+    Info (12022): Found design unit 1: DFF8bit-Behavioral
+    Info (12023): Found entity 1: DFF8bit
 Info (12021): Found 1 design units, including 0 entities, in source file spwpkg.vhd
     Info (12022): Found design unit 1: spwpkg
 Info (12021): Found 2 design units, including 1 entities, in source file spwlink.vhd
@@ -893,10 +911,11 @@ Info (12128): Elaborating entity "lpm_constant0" for hierarchy "lpm_constant0:in
 Info (12128): Elaborating entity "lpm_constant" for hierarchy "lpm_constant0:inst3|lpm_constant:LPM_CONSTANT_component"
 Info (12130): Elaborated megafunction instantiation "lpm_constant0:inst3|lpm_constant:LPM_CONSTANT_component"
 Info (12133): Instantiated megafunction "lpm_constant0:inst3|lpm_constant:LPM_CONSTANT_component" with the following parameter:
-    Info (12134): Parameter "lpm_cvalue" = "1"
+    Info (12134): Parameter "lpm_cvalue" = "255"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
     Info (12134): Parameter "lpm_width" = "8"
+Info (12128): Elaborating entity "DFF8bit" for hierarchy "DFF8bit:inst4"
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "spwstream:inst1|spwram:rxmem|s_mem_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -916,10 +935,10 @@ Info (19000): Inferred 2 megafunctions from design logic
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
     Info (276029): Inferred altsyncram megafunction from the following design logic: "spwstream:inst|spwram:txmem|s_mem_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 9
+        Info (286033): Parameter WIDTH_A set to 8
         Info (286033): Parameter WIDTHAD_A set to 11
         Info (286033): Parameter NUMWORDS_A set to 2048
-        Info (286033): Parameter WIDTH_B set to 9
+        Info (286033): Parameter WIDTH_B set to 8
         Info (286033): Parameter WIDTHAD_B set to 11
         Info (286033): Parameter NUMWORDS_B set to 2048
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
@@ -949,18 +968,37 @@ Info (12133): Instantiated megafunction "spwstream:inst1|spwram:rxmem|altsyncram
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_23h1.tdf
     Info (12023): Found entity 1: altsyncram_23h1
+Info (12130): Elaborated megafunction instantiation "spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0"
+Info (12133): Instantiated megafunction "spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "11"
+    Info (12134): Parameter "NUMWORDS_A" = "2048"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "11"
+    Info (12134): Parameter "NUMWORDS_B" = "2048"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6fg1.tdf
+    Info (12023): Found entity 1: altsyncram_6fg1
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 732 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 22 output pins
-    Info (21061): Implemented 678 logic cells
-    Info (21064): Implemented 18 RAM segments
+Info (21057): Implemented 746 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 30 output pins
+    Info (21061): Implemented 696 logic cells
+    Info (21064): Implemented 17 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 667 megabytes
-    Info: Processing ended: Mon Sep 11 20:27:42 2023
+    Info: Peak virtual memory: 670 megabytes
+    Info: Processing ended: Thu Sep 21 12:31:30 2023
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 

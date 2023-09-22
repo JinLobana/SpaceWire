@@ -1,9 +1,10 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="spacewire">
-		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|lpm_constant0:inst2|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_rf6.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|lpm_constant0:inst3|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_rf6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|lpm_constant0:inst3|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_6j6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|lpm_constant0:inst5|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_6j6.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|spwstream:inst1|spwram:rxmem|altsyncram:s_mem_rtl_0" CBX_FILE_NAME="altsyncram_23h1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0" CBX_FILE_NAME="altsyncram_23h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|lpm_constant0:inst2|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_6j6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|spacewire|spwstream:inst|spwram:txmem|altsyncram:s_mem_rtl_0" CBX_FILE_NAME="altsyncram_6fg1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

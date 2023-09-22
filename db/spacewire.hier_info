@@ -2,19 +2,8 @@
 SpWT_started <= spwstream:inst.started
 CLK => spwstream:inst.clk
 CLK => spwstream:inst1.clk
-SpWT_linkstart => spwstream:inst.linkstart
-SpWT_txWrite => spwstream:inst.txwrite
-SpWT_txFlag => spwstream:inst.txflag
+SpWR_linkstart => spwstream:inst.linkstart
 SpWR_linkstart => spwstream:inst1.linkstart
-SpWR_rxRead => spwstream:inst1.rxread
-DataSend[0] => spwstream:inst.txdata[0]
-DataSend[1] => spwstream:inst.txdata[1]
-DataSend[2] => spwstream:inst.txdata[2]
-DataSend[3] => spwstream:inst.txdata[3]
-DataSend[4] => spwstream:inst.txdata[4]
-DataSend[5] => spwstream:inst.txdata[5]
-DataSend[6] => spwstream:inst.txdata[6]
-DataSend[7] => spwstream:inst.txdata[7]
 SpWT_connecting <= spwstream:inst.connecting
 SpWT_running <= spwstream:inst.running
 SpWT_txrdy <= spwstream:inst.txrdy
@@ -36,6 +25,15 @@ DataRecv[4] <= spwstream:inst1.rxdata[4]
 DataRecv[5] <= spwstream:inst1.rxdata[5]
 DataRecv[6] <= spwstream:inst1.rxdata[6]
 DataRecv[7] <= spwstream:inst1.rxdata[7]
+LEDOutput[0] <= DFF8bit:inst4.q[0]
+LEDOutput[1] <= DFF8bit:inst4.q[1]
+LEDOutput[2] <= DFF8bit:inst4.q[2]
+LEDOutput[3] <= DFF8bit:inst4.q[3]
+LEDOutput[4] <= DFF8bit:inst4.q[4]
+LEDOutput[5] <= DFF8bit:inst4.q[5]
+LEDOutput[6] <= DFF8bit:inst4.q[6]
+LEDOutput[7] <= DFF8bit:inst4.q[7]
+dff_reset => DFF8bit:inst4.reset
 
 
 |spacewire|spwstream:inst
@@ -2047,13 +2045,35 @@ result[7] <= lpm_constant:LPM_CONSTANT_component.result[7]
 
 |spacewire|lpm_constant0:inst3|lpm_constant:LPM_CONSTANT_component
 result[0] <= <VCC>
-result[1] <= <GND>
-result[2] <= <GND>
-result[3] <= <GND>
-result[4] <= <GND>
-result[5] <= <GND>
-result[6] <= <GND>
-result[7] <= <GND>
+result[1] <= <VCC>
+result[2] <= <VCC>
+result[3] <= <VCC>
+result[4] <= <VCC>
+result[5] <= <VCC>
+result[6] <= <VCC>
+result[7] <= <VCC>
+
+
+|spacewire|lpm_constant0:inst5
+result[0] <= lpm_constant:LPM_CONSTANT_component.result[0]
+result[1] <= lpm_constant:LPM_CONSTANT_component.result[1]
+result[2] <= lpm_constant:LPM_CONSTANT_component.result[2]
+result[3] <= lpm_constant:LPM_CONSTANT_component.result[3]
+result[4] <= lpm_constant:LPM_CONSTANT_component.result[4]
+result[5] <= lpm_constant:LPM_CONSTANT_component.result[5]
+result[6] <= lpm_constant:LPM_CONSTANT_component.result[6]
+result[7] <= lpm_constant:LPM_CONSTANT_component.result[7]
+
+
+|spacewire|lpm_constant0:inst5|lpm_constant:LPM_CONSTANT_component
+result[0] <= <VCC>
+result[1] <= <VCC>
+result[2] <= <VCC>
+result[3] <= <VCC>
+result[4] <= <VCC>
+result[5] <= <VCC>
+result[6] <= <VCC>
+result[7] <= <VCC>
 
 
 |spacewire|lpm_constant0:inst2
@@ -2069,12 +2089,47 @@ result[7] <= lpm_constant:LPM_CONSTANT_component.result[7]
 
 |spacewire|lpm_constant0:inst2|lpm_constant:LPM_CONSTANT_component
 result[0] <= <VCC>
-result[1] <= <GND>
-result[2] <= <GND>
-result[3] <= <GND>
-result[4] <= <GND>
-result[5] <= <GND>
-result[6] <= <GND>
-result[7] <= <GND>
+result[1] <= <VCC>
+result[2] <= <VCC>
+result[3] <= <VCC>
+result[4] <= <VCC>
+result[5] <= <VCC>
+result[6] <= <VCC>
+result[7] <= <VCC>
+
+
+|spacewire|DFF8bit:inst4
+clk => flipflop_state[0].CLK
+clk => flipflop_state[1].CLK
+clk => flipflop_state[2].CLK
+clk => flipflop_state[3].CLK
+clk => flipflop_state[4].CLK
+clk => flipflop_state[5].CLK
+clk => flipflop_state[6].CLK
+clk => flipflop_state[7].CLK
+reset => flipflop_state[0].ACLR
+reset => flipflop_state[1].ACLR
+reset => flipflop_state[2].ACLR
+reset => flipflop_state[3].ACLR
+reset => flipflop_state[4].ACLR
+reset => flipflop_state[5].ACLR
+reset => flipflop_state[6].ACLR
+reset => flipflop_state[7].ACLR
+d[0] => flipflop_state[0].DATAIN
+d[1] => flipflop_state[1].DATAIN
+d[2] => flipflop_state[2].DATAIN
+d[3] => flipflop_state[3].DATAIN
+d[4] => flipflop_state[4].DATAIN
+d[5] => flipflop_state[5].DATAIN
+d[6] => flipflop_state[6].DATAIN
+d[7] => flipflop_state[7].DATAIN
+q[0] <= flipflop_state[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= flipflop_state[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= flipflop_state[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= flipflop_state[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= flipflop_state[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= flipflop_state[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= flipflop_state[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= flipflop_state[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
